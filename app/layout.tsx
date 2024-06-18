@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+// import { Rubik } from "next/font/google";
+// const rubik = Rubik({ subsets: ["latin"] });
+
+const mazzard = localFont({
+  src: '../public/MazzardSoftH-Regular.otf',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={mazzard.className}>
+      <body>{children}</body>
     </html>
   );
 }
