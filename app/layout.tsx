@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import localFont from 'next/font/local'
-
-// import { Rubik } from "next/font/google";
-// const rubik = Rubik({ subsets: ["latin"] });
+import localFont from "next/font/local";
 
 const mazzard = localFont({
-  src: '../public/MazzardSoftH-Regular.otf',
-  display: 'swap',
-})
+  src: [
+    { path: "../public/fonts/MazzardSoftH-Regular.otf", weight: "400" },
+    { path: "../public/fonts/MazzardSoftH-Bold.otf", weight: "700" },
+    { path: "../public/fonts/MazzardSoftH-Thin.otf", weight: "100" },
+    { path: "../public/fonts/MazzardSoftH-Medium.otf", weight: "500" },
+    { path: "../public/fonts/MazzardSoftH-SemiBold.otf", weight: "600" },
+    { path: "../public/fonts/MazzardSoftH-Light.otf", weight: "300" },
+    { path: "../public/fonts/MazzardSoftH-ExtraBold.otf", weight: "800" },
+    { path: "../public/fonts/MazzardSoftH-ExtraLight.otf", weight: "200" },
+    { path: "../public/fonts/MazzardSoftH-Black.otf", weight: "900" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
